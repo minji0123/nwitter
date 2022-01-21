@@ -1,5 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import firebase from 'firebase/compat/app';
+import "firebase/auth"; // firebase 인증 모듈을 쓰기 위해 
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,6 +17,9 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID
 };
 
-
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+export const authService = firebase.auth(); // 로그인을 위해 사용할거임. authService 변수에 담아놓음
+
+
+// const app = initializeApp(firebaseConfig);
