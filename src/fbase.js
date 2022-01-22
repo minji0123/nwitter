@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 import firebase from 'firebase/compat/app';
-import "firebase/auth"; // firebase 인증 모듈을 쓰기 위해 
+import "firebase/compat/auth"; // firebase 인증 모듈을 쓰기 위해 
 
 
 // TODO: Add SDKs for Firebase products that you want to use
