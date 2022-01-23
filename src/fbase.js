@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import firebase from 'firebase/compat/app';
 import "firebase/compat/auth"; // firebase 인증 모듈을 쓰기 위해 
+import "firebase/compat/firestore"; //
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -20,5 +21,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 export const authService = firebase.auth(); // 로그인을 위해 사용할거임. authService 변수에 담아놓음
 export const firebaseInstance = firebase; // 쇼셜로그인을 위해 사용할거임. 근데 쇼설로그인은 위처럼 .auth 같은 함수가없어서 전부 다 export 해야됨
+export const dbService = firebase.firestore(); // 
 
 // const app = initializeApp(firebaseConfig);
