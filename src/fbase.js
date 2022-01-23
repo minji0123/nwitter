@@ -19,6 +19,6 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 export const authService = firebase.auth(); // 로그인을 위해 사용할거임. authService 변수에 담아놓음
-
+export const firebaseInstance = firebase; // 쇼셜로그인을 위해 사용할거임. 근데 쇼설로그인은 위처럼 .auth 같은 함수가없어서 전부 다 export 해야됨
 
 // const app = initializeApp(firebaseConfig);
