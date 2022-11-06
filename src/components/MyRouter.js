@@ -1,11 +1,10 @@
 /*eslint-disable*/
-import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
+
 import Auth from '../routes/Auth';
 import Home from '../routes/Home';
 
-const MyRouter = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+const MyRouter = ({isLoggedIn}) => {
 
     return(
         <>

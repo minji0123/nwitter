@@ -1,10 +1,17 @@
 /*eslint-disable*/
-import MyRouter from "./MyRouter";
+import { useState } from 'react';
+
+import MyRouter from "components/MyRouter";
+import {app,auth} from "MyFirebase";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(auth.currentUser);
+  console.log(auth.currentUser);
+
   return (
   <>
-    <MyRouter/>
+    <MyRouter isLoggedIn={isLoggedIn}/>
+    <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
   </>
   );
 }
